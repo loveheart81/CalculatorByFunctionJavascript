@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculatorJavascript</title>
+</head>
+<body>
+ <div style="text-align: center; background-color: black; border-radius: 50px;">
+        <div>
+            <h1>Calculator</h1>
+            <input id="output" type="text" >
+        </div>
+        <div style="margin: 20px;">
+                <button onclick="cancel()" style="margin: 15px; padding: 5px;color: pink; border-radius: 20px; background-color: rgba(132, 127, 177, 0.555);">C</button>
+                <button onclick="bracket()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">()</button>
+                <button onclick="percent()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">%</button>
+                <button onclick="slash()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">/</button>
+        </div>
+        <div style="margin: 20px;">
+                <button onclick="seven()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">7</button>
+                <button onclick="eight()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">8</button>
+                <button onclick="nine()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">9</button>
+                <button onclick="multiply()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">x</button>
+        </div>
+        <div>
+            <button onclick="four()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">4</button>
+            <button onclick="five()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">5</button>
+            <button onclick="six()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">6</button>
+            <button onclick="subtraction()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">-</button>
+        </div>
+        <div>
+            <button onclick="one()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">1</button>
+            <button onclick="two()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">2</button>
+            <button onclick="three()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">3</button>
+            <button onclick="plus()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">+</button>
+        </div>
+        <div>
+            <button onclick="sign()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">+/-</button>
+            <button onclick="zero()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">0</button>
+            <button onclick="dot()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">.</button>
+            <button onclick="equal()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(50, 192, 121, 0.753);">=</button>
+        </div>
+ </div>
+
+
+
+
+
+    <script>
+        
+    let output = document.getElementById('output');
+    function cancel(){
+        output.value =""
+    }
+    function bracket(){
+        output.value +="()"
+    }
+    function percent(){
+        output.value +="%"
+    }
+    function slash(){
+        output.value +="/"
+    }
+    function seven(){
+        output.value +="7"
+    }
+    function eight(){
+        output.value +="8"
+    }
+    function nine(){
+        output.value +="9"
+    }
+    function multiply(){
+        output.value +="*"
+    }
+    function four(){
+        output.value +="4"
+    }
+    function five(){
+        output.value +="5"
+    }
+    function six(){
+        output.value +="6"
+    }
+    function subtraction(){
+        output.value +="-"
+    }
+    function one(){
+        output.value +="1"
+    }
+    function two(){
+        output.value +="2"
+    }
+    function three(){
+        output.value +="3"
+    }
+    function plus(){
+        output.value +="+"
+    }
+    function sign(){
+        output.value +="+/-"
+    }
+    function zero(){
+        output.value +="0"
+    }
+    function dot(){
+        output.value +="."
+    }
+    function equal(){
+        output.value = eval(output.value);
+    }
+
+ 
+
+    </script>
+    <br>
+    <img src="/Screenshot_20230616-152412_Calculator.jpg" width="20%" height="400px" alt="" style="align-items: center;">
+
+</body>
+</html>
