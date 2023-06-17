@@ -5,41 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalculatorJavascript</title>
 </head>
+<style>
+    input{
+        padding: 11px;
+        width: 80%;
+        outline: none; 
+    }
+    h1{
+        color: white;
+        padding: 6px;
+        text-shadow: 0 0 12px ;
+    }
+
+    button{
+        border: none;
+    }
+
+
+</style>
 <body>
- <div style="text-align: center; background-color: black; border-radius: 50px;">
-        <div>
+ <div style="text-align: center; background-color: black; border-radius: 20px;max-width:300px;margin: 0 auto;">
+        <div> 
             <h1>Calculator</h1>
             <input id="output" type="text" >
         </div>
         <div style="margin: 20px;">
-                <button onclick="cancel()" style="margin: 15px; padding: 5px;color: pink; border-radius: 20px; background-color: rgba(132, 127, 177, 0.555);">C</button>
-                <button onclick="bracket()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">()</button>
-                <button onclick="percent()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">%</button>
-                <button onclick="slash()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">/</button>
+            <button onclick="cancel()" style="margin: 10px; padding: 12px;color: pink; border-radius: 50%; background-color: rgba(132, 127, 177, 0.555);">C</button>
+            <button onclick="bracket()" style="margin: 10px;padding: 12px;color: rgb(150, 228, 35);border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">()</button>
+            <button onclick="percent()" style="margin: 10px;padding: 12px;color: rgb(150, 228, 35);border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">%</button>
+            <button onclick="slash()" style="margin: 10px;padding: 12px;color: rgb(150, 228, 35);border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">/</button>
         </div>
         <div style="margin: 20px;">
-                <button onclick="seven()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">7</button>
-                <button onclick="eight()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">8</button>
-                <button onclick="nine()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">9</button>
-                <button onclick="multiply()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">x</button>
+            <button onclick="seven()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">7</button>
+            <button onclick="eight()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">8</button>
+            <button onclick="nine()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">9</button>
+            <button onclick="multiply()" style="margin: 10px;padding: 12px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">x</button>
         </div>
         <div>
-            <button onclick="four()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">4</button>
-            <button onclick="five()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">5</button>
-            <button onclick="six()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">6</button>
-            <button onclick="subtraction()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">-</button>
+            <button onclick="four()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">4</button>
+            <button onclick="five()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">5</button>
+            <button onclick="six()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">6</button>
+            <button onclick="subtraction()" style="margin: 10px;padding: 12px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">-</button>
         </div>
         <div>
-            <button onclick="one()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">1</button>
-            <button onclick="two()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">2</button>
-            <button onclick="three()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">3</button>
-            <button onclick="plus()" style="margin: 15px;padding: 5px;color: rgb(150, 228, 35);border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">+</button>
+            <button onclick="one()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">1</button>
+            <button onclick="two()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">2</button>
+            <button onclick="three()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">3</button>
+            <button onclick="plus()" style="margin: 10px;padding: 12px;color: rgb(150, 228, 35);border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">+</button>
         </div>
         <div>
-            <button onclick="sign()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">+/-</button>
-            <button onclick="zero()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">0</button>
-            <button onclick="dot()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(132, 127, 177, 0.555);">.</button>
-            <button onclick="equal()" style="margin: 15px;padding: 5px;color: white;border-radius: 20px;background-color: rgba(50, 192, 121, 0.753);">=</button>
+            <button onclick="sign()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">+/-</button>
+            <button onclick="zero()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">0</button>
+            <button onclick="dot()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(132, 127, 177, 0.555);">.</button>
+            <button onclick="equal()" style="margin: 10px;padding: 12px;color: white;border-radius: 50%;background-color: rgba(50, 192, 121, 0.753);">=</button>
         </div>
  </div>
 
